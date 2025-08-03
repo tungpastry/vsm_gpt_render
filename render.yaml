@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: vsm-gpt-api
+    runtime: python
+    buildCommand: ""
+    startCommand: "python gpt_query_server.py"
+    autoDeploy: true
