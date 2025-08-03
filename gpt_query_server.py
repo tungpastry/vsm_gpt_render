@@ -12,6 +12,11 @@ DB_CONFIG = {
     "password": os.getenv("DB_PASSWORD")
 }
 
+# Route mặc định để tránh lỗi 404
+@app.route("/")
+def index():
+    return "✅ VSM GPT API is running", 200
+
 @app.route("/query", methods=["POST"])
 def handle_query():
     data = request.get_json()
